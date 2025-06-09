@@ -1,0 +1,166 @@
+{
+  "inbox": [
+    {
+      "id": 1,
+      "isGroup": true,
+      "inboxTitle": "109220-Naturalization",
+      "participants": 3,
+      "date": "2021-01-01T19:10:00",
+      "chats": [
+        {
+          "id": 1,
+          "isNew": false,
+          "isSelf": false,
+          "replyChatId": null,
+          "senderName": "Mary Hilda",
+          "message": "Hello Obaidullah, I will be your case advisor for case #029290. I have assigned some homework for you to fill. Please keep up with the due dates. Should you have any questions, you can message me anytime. Thanks.",
+          "date": "2021-06-09T19:32:00"
+        },
+        {
+          "id": 2,
+          "isNew": false,
+          "isSelf": true,
+          "replyChatId": null,
+          "senderName": "You",
+          "message": "No worries. It will be completed ASAP. I’ve asked him yesterday.",
+          "date": "2021-06-09T19:32:00"
+        },
+        {
+          "id": 3,
+          "isNew": false,
+          "isSelf": true,
+          "replyChatId": null,
+          "senderName": "You",
+          "message": "Please contact Mary for questions regarding the case bcs she will be managing your forms from now on! Thanks Mary.",
+          "date": "2021-06-09T19:32:00"
+        },
+        {
+          "id": 4,
+          "isNew": false,
+          "isSelf": false,
+          "replyChatId": null,
+          "senderName": "Mary Hilda",
+          "message": "Sure thing, Claren",
+          "date": "2021-06-09T19:32:00"
+        },
+        {
+          "id": 5,
+          "isNew": true,
+          "isSelf": false,
+          "replyChatId": null,
+          "senderName": "Obaidullah Amarkhil",
+          "message": "Morning. I’ll try to do them. Thanks",
+          "date": "2021-06-09T19:32:00"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "isGroup": true,
+      "inboxTitle": "Jeannette Moraima Guaman Chamba (Hutto I-589) [ Hutto Follow Up - Brief Service ]",
+      "participants": 3,
+      "date": "2021-02-06T10:45:00",
+      "chats": [
+        {
+          "id": 1,
+          "isNew": false,
+          "isSelf": false,
+          "replyChatId": null,
+          "senderName": "Case Manager",
+          "message": "Hi Jeannette, just a quick follow-up on your Hutto case. Have you received the document I sent last week?",
+          "date": "2021-02-06T10:46:00"
+        },
+        {
+          "id": 2,
+          "isNew": false,
+          "isSelf": false,
+          "replyChatId": 1,
+          "senderName": "Jeannette Moraima Guaman Chamba",
+          "message": "Yes, I received it. Thank you!",
+          "date": "2021-02-06T10:48:00"
+        },
+        {
+          "id": 3,
+          "isNew": false,
+          "isSelf": true,
+          "replyChatId": null,
+          "senderName": "You",
+          "message": "Please let us know if you have any questions about the form.",
+          "date": "2021-02-06T10:49:00"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "isGroup": true,
+      "inboxTitle": "8405-Diana SALAZAR MUNGUIA",
+      "participants": 3,
+      "date": "2021-01-06T12:19:00",
+      "chats": [
+        {
+          "id": 1,
+          "isNew": false,
+          "isSelf": false,
+          "replyChatId": null,
+          "senderName": "Diana SALAZAR MUNGUIA",
+          "message": "Hello, I just uploaded my ID documents.",
+          "date": "2021-01-06T12:20:00"
+        },
+        {
+          "id": 2,
+          "isNew": false,
+          "isSelf": true,
+          "replyChatId": null,
+          "senderName": "You",
+          "message": "Great! We’ll verify them and get back to you shortly.",
+          "date": "2021-01-06T12:21:00"
+        },
+        {
+          "id": 3,
+          "isNew": true,
+          "isSelf": false,
+          "replyChatId": null,
+          "senderName": "Diana SALAZAR MUNGUIA",
+          "message": "Thank you!",
+          "date": "2021-01-06T12:22:00"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "isGroup": false,
+      "inboxTitle": "FastVisa Support",
+      "participants": 2,
+      "date": "2021-01-06T12:19:00",
+      "chats": [
+        {
+          "id": 1,
+          "isNew": false,
+          "isSelf": true,
+          "replyChatId": null,
+          "senderName": "You",
+          "message": "Hi, I need help accessing my account. I forgot my password.",
+          "date": "2021-01-06T12:19:00"
+        },
+        {
+          "id": 2,
+          "isNew": false,
+          "isSelf": false,
+          "replyChatId": 1,
+          "senderName": "FastVisa Support",
+          "message": "No worries! I’ve sent a reset link to your registered email.",
+          "date": "2021-01-06T12:20:00"
+        },
+        {
+          "id": 3,
+          "isNew": true,
+          "isSelf": true,
+          "replyChatId": null,
+          "senderName": "You",
+          "message": "Got it. Thanks!",
+          "date": "2021-01-06T12:21:00"
+        }
+      ]
+    }
+  ]
+}
