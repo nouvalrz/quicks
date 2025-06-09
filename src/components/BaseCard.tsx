@@ -8,7 +8,7 @@ const BaseCard = ({
   className?: string;
 }) => {
   return (
-    <div className={clsx("bg-white rounded py-6 px-8", className)}>
+    <div className={clsx("bg-white rounded overflow-clip", className)}>
       {children}
     </div>
   );

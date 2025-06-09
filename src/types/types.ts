@@ -1,5 +1,5 @@
 export type Inbox = {
-  id: string;
+  id: number;
   isGroup: boolean;
   inboxTitle: string;
   participants: number;

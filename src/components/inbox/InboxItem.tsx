@@ -2,9 +2,18 @@ import { formatFullDateTime } from "../../lib/formatDate";
 import type { Inbox } from "../../types/types";
 import { InboxItemIcon } from "../Icons";
 
-const InboxItem = ({ inbox }: { inbox: Inbox }) => {
+const InboxItem = ({
+  inbox,
+  onClick,
+}: {
+  inbox: Inbox;
+  onClick: () => void;
+}) => {
   return (
-    <div className="my-[22px] flex gap-4 items-start">
+    <div
+      className="my-[22px] flex gap-4 items-start cursor-pointer"
+      onClick={onClick}
+    >
       <InboxItemIcon className="flex-shrink-0" />
       <div>
         <div className="flex gap-3 items-start">

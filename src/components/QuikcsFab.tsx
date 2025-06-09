@@ -4,7 +4,7 @@ import { AnimatePresence } from "motion/react";
 import InboxFab from "./InboxFab";
 import TaskFab from "./TaskFab";
 import clsx from "clsx";
-import InboxCard from "./inbox/InboxCard";
+import InboxPopup from "./inbox/InboxPopup";
 
 const QuikcsFab = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -55,7 +55,7 @@ const QuikcsFab = () => {
           </button>
         </div>
       )}
-      {selected === "inbox" && <InboxCard isOpen={selected === "inbox"} />}
+      {selected === "inbox" && <InboxPopup isOpen={selected === "inbox"} />}
     </div>
   );
 };

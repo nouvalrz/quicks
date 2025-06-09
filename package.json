@@ -5,8 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "concurrently \"npx json-server --watch src/mock-backend/db.json --port 4000 --delay 1000\" \"npx vite --port 5175\"",
-    "dev-react": "vite",
-    "dev-backend": "npx json-server --watch src/mock-backend/db.json --port 4000",
+    "dev-react": "vite --port 5175",
+    "dev-backend": "npx json-server --watch src/mock-backend/db.json --port 4000 --delay 1000",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview"
@@ -19,7 +19,8 @@
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
     "swr": "^2.3.3",
-    "tailwindcss": "^4.1.8"
+    "tailwindcss": "^4.1.8",
+    "zustand": "^5.0.5"
   },
   "devDependencies": {
     "@eslint/js": "^9.25.0",

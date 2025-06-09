@@ -211,3 +211,84 @@ export const InboxItemIcon = ({ className }: { className?: string }) => {
     </svg>
   );
 };
+export const LeftArrowIcon = ({
+  className,
+  fill,
+}: {
+  className?: string;
+  fill?: string;
+}) => {
+  return (
+    <svg
+      width="32"
+      height="31"
+      viewBox="0 0 32 31"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx(className)}
+    >
+      <path
+        d="M25.9883 13.8304H10.6868L17.7152 6.80204L15.9298 5.02924L5.87134 15.0877L15.9298 25.1462L17.7026 23.3734L10.6868 16.345H25.9883V13.8304Z"
+        fill="#F2F2F2"
+        style={{
+          fill: fill || "#F2F2F2",
+          fillOpacity: 1,
+        }}
+      />
+    </svg>
+  );
+};
+
+export const CloseIcon = ({
+  className,
+  fill,
+}: {
+  className?: string;
+  fill?: string;
+}) => {
+  return (
+    <svg
+      width="21"
+      height="21"
+      viewBox="0 0 21 21"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx(className)}
+    >
+      <path
+        d="M21 2.115L18.885 0L10.5 8.385L2.115 0L0 2.115L8.385 10.5L0 18.885L2.115 21L10.5 12.615L18.885 21L21 18.885L12.615 10.5L21 2.115Z"
+        fill={fill || "#F2F2F2"}
+        style={{
+          fill: fill || "#F2F2F2",
+          fillOpacity: 1,
+        }}
+      />
+    </svg>
+  );
+};
+
+export const HorizontalMoreIcon = ({
+  className,
+  fill,
+}: {
+  className?: string;
+  fill?: string;
+}) => {
+  return (
+    <svg
+      width="31"
+      height="31"
+      viewBox="0 0 31 31"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx(className)}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M7.73685 12.5731C6.35381 12.5731 5.22223 13.7046 5.22223 15.0877C5.22223 16.4707 6.35381 17.6023 7.73685 17.6023C9.11989 17.6023 10.2515 16.4707 10.2515 15.0877C10.2515 13.7046 9.11989 12.5731 7.73685 12.5731ZM22.8246 12.5731C21.4415 12.5731 20.3099 13.7046 20.3099 15.0877C20.3099 16.4707 21.4415 17.6023 22.8246 17.6023C24.2076 17.6023 25.3392 16.4707 25.3392 15.0877C25.3392 13.7046 24.2076 12.5731 22.8246 12.5731ZM12.7661 15.0877C12.7661 13.7046 13.8977 12.5731 15.2807 12.5731C16.6637 12.5731 17.7953 13.7046 17.7953 15.0877C17.7953 16.4707 16.6637 17.6023 15.2807 17.6023C13.8977 17.6023 12.7661 16.4707 12.7661 15.0877Z"
+        fill={fill || "#4F4F4F"}
+      />
+    </svg>
+  );
+};

@@ -10,3 +10,27 @@ export const formatFullDateTime = (value: string): string => {
 
   return `${day}/${month}/${year} ${hours}:${minutes}`;
 };
+
+export const formatDateOnly = (value: string): string => {
+  const date = new Date(value);
+
+  const formatted = new Intl.DateTimeFormat("en-US", {
+    month: "long",
+    day: "numeric",
+    year: "numeric",
+  }).format(date);
+
+  return formatted;
+};
+
+export const formatTimeOnly = (value: string): string => {
+  const isoString = value;
+  const date = new Date(isoString);
+
+  const hours = date.getHours().toString().padStart(2, "0");
+  const minutes = date.getMinutes().toString().padStart(2, "0");
+
+  const timeFormatted = `${hours}:${minutes}`;
+
+  return timeFormatted;
+};

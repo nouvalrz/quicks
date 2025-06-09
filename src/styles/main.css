@@ -12,13 +12,22 @@
   --color-indicator-red: #eb5757;
   --color-indicator-mustard: #f2c94c;
 
+  --color-chat-orange-primary: #e5a443;
+  --color-chat-orange-secondary: #fceed3;
+
+  --color-chat-purple-primary: #9b51e0;
+  --color-chat-purple-secondary: #eedcff;
+
+  --color-chat-green-primary: #43b78d;
+  --color-chat-green-secondary: #d2f2ea;
+
   --color-sticker-water: #e9f3ff;
   --color-sticker-peach: #fdcfa4;
-  --color-sticker-sand: "#F9E9C3";
-  --color-sticker-mint: "#AFEBDB";
-  --color-sticker-tea: "#CBF1C2";
-  --color-sticker-lilac: "#CFCEF9";
-  --color-sticker-lavender: "#F9E0FD";
+  --color-sticker-sand: #f9e9c3;
+  --color-sticker-mint: #afebdb;
+  --color-sticker-tea: #cbf1c2;
+  --color-sticker-lilac: #cfcef9;
+  --color-sticker-lavender: #f9e0fd;
 
   --color-fab-task: #f8b76b;
   --color-fab-inbox: #8785ff;
