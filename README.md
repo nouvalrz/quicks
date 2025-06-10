@@ -1,54 +1,69 @@
-# React + TypeScript + Vite
+# Quicks – Frontend Challenge Submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a frontend challenge submission. The goal was to create a pixel-perfect, interactive UI for a tool called **Quicks**, which consists of two main features:
 
-Currently, two official plugins are available:
+- **Messaging**
+- **To Do List**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The design reference was provided in Figma and included both a **Foundation** and **Bonus Round** section.
 
-## Expanding the ESLint configuration
+**IMPORTANT** : Please refer to the **Local Development** section below if you'd like to run this project on your machine.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🔗 Live Demo
+
+👉 [https://quicks.nouval.site](https://quicks.nouval.site)
+
+---
+
+## 🛠️ Tech Stack
+
+- **TypeScript**
+- **React**
+- **Zustand** – for state management
+- **Tailwind CSS** – for styling
+- **json-server** – for mocking API responses
+- **Caddy** – as a web server and reverse proxy on a personal VPS
+
+---
+
+## ✅ Features Implemented
+
+- Fully responsive and pixel-perfect UI based on the Figma design
+- Smooth, bug-free interactions for both **Messaging** and **To Do List**
+- Functional **Bonus Round** features
+- Mock API integration using `json-server` to simulate realistic data fetching and delays
+- Deployment to a personal VPS using Caddy
+- Development script using `concurrently` to run frontend and mock backend together
+- Intended 1-second delay on each API response to simulate a loading process.
+
+---
+
+## 📁 Environment Setup
+
+Before running the project, create a `.env` file in the root directory with the following content:
+
+```.env
+VITE_BASE_API_URL=http://localhost:4000
+```
+Note: You can change the port, but make sure to also update it in the `dev` script.
+
+## 🧪 Local Development
+
+To run the project locally:
+
+### Install dependencies
+```
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+### Start both frontend and mock backend
 ```
+npm run dev
+```
+The dev script uses concurrently to start both:
+
+The Vite development server (frontend)
+
+The json-server mock backend (on port 4000)
