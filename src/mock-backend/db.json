@@ -198,12 +198,21 @@
         },
         {
           "id": "e6f89c74-6507-4c41-84f2-82ed406b6c8d",
-          "isNew": true,
+          "isNew": false,
           "isSelf": true,
           "replyChatId": null,
           "senderName": "You",
           "message": "Got it. Thanks!",
           "date": "2021-01-06T12:21:00"
+        },
+        {
+          "id": "32f02296-d9b4-48d2-b86f-8ad7332e1242",
+          "date": "2025-06-10T12:29:02",
+          "isNew": false,
+          "isSelf": true,
+          "senderName": "You",
+          "message": "done",
+          "replyChatId": null
         }
       ]
     }
@@ -216,12 +225,7 @@
       "description": "This case has been reviewed and marked for closure due to inactivity. All relevant documents have been archived.",
       "completed": false,
       "categoryName": "Urgent To-Do",
-      "tags": [
-        "Appointments",
-        "Offline Meeting",
-        "Virtual Meeting",
-        "Self Task"
-      ]
+      "tags": []
     },
     {
       "id": "ee5a0b76-045d-41b2-bcf3-eab23dc4812e",

@@ -59,7 +59,12 @@ export const useInboxDetailStore = create<InboxDetailStore>((set, get) => {
         return {
           inbox: {
             ...state.inbox,
-            chats: [...state.inbox.chats, newChat],
+            chats: [
+              ...state.inbox.chats.map((chat) => {
+                return { ...chat, isNew: false };
+              }),
+              newChat,
+            ],
           },
         };
       });
@@ -71,7 +76,7 @@ export const useInboxDetailStore = create<InboxDetailStore>((set, get) => {
         ...inbox.chats.map((chat) => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
           const { sendingStatus, ...chatNoStatus } = chat;
-          return chatNoStatus;
+          return { ...chatNoStatus, isNew: false };
         }),
         chatWithouStatus,
       ];
