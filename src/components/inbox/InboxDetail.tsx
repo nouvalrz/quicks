@@ -7,9 +7,10 @@ import { useInboxDetailStore } from "../../store/useInboxDetailStore";
 import { useEffect, useRef, useState } from "react";
 import InboxChatList from "./InboxChatList";
 import InboxChatForm from "./InboxChatForm";
+import { LoadingIcon } from "../Icons";
 
 const InboxDetail = ({ id, onBack }: { id: string; onBack: () => void }) => {
-  const { initInbox, initialized } = useInboxDetailStore();
+  const { initInbox, initialized, inbox } = useInboxDetailStore();
   const now = useRef(Date.now()).current;
   const { data, isLoading, error } = useSWR<Inbox>(
     `/api/inbox/${id}?t=${now}`,
@@ -69,6 +70,16 @@ const InboxDetail = ({ id, onBack }: { id: string; onBack: () => void }) => {
               onClick={scrollToBottom}
             >
               <p className="text-primary font-bold">New Message</p>
+            </div>
+          )}
+          {initialized && inbox && !inbox.isGroup && (
+            <div className="absolute bottom-18 w-full px-8">
+              <div className="py-4 px-4 rounded bg-sticker-water max-w-full flex gap-2 items-center">
+                <LoadingIcon className="animate-spin size-8" fill="#2f80ed" />
+                <p className="font-bold">
+                  Please wait while we connect you with one of our team ...
+                </p>
+              </div>
             </div>
           )}
         </div>

@@ -76,7 +76,10 @@ const TaskItem = ({ task }: { task: Task }) => {
               className="flex flex-col gap-2 w-full mt-3"
             >
               <div className="flex gap-3 items-center">
-                <ClockIcon className="size-5" />
+                <ClockIcon
+                  className="size-5"
+                  fill={task.dueDate ? "#2f80ed" : undefined}
+                />
                 <input
                   type="date"
                   placeholder="Set Date"
@@ -86,7 +89,10 @@ const TaskItem = ({ task }: { task: Task }) => {
                 />
               </div>
               <div className="flex gap-3 items-center">
-                <PencilIcon className="size-4" />
+                <PencilIcon
+                  className="size-4"
+                  fill={task.description ? "#2f80ed" : undefined}
+                />
                 <textarea
                   className="w-full max-w-md ml-1 px-3 py-1 resize-none"
                   placeholder="No description"

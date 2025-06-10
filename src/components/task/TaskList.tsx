@@ -29,6 +29,12 @@ const TaskList = () => {
     }
   }, [data, initTasks]);
 
+  const filteredTasks = tasks.filter((task) =>
+    !selectedCategory
+      ? true
+      : task.categoryName.toString() === selectedCategory.toString()
+  );
+
   return (
     <div className="w-full h-full overflow-y-scroll py-6 px-8 flex flex-col">
       <TaskHeader
@@ -43,7 +49,7 @@ const TaskList = () => {
       )}
       {initialized && (
         <div className="h-full flex flex-col flex-grow gap-6 mt-6">
-          {tasks.map((task) => (
+          {filteredTasks.map((task) => (
             <>
               <TaskItem task={task} key={task.id} />
               <hr className="border-primary-gray-1" />

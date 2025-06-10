@@ -102,7 +102,13 @@ export const SearchIcon = ({
   );
 };
 
-export const LoadingIcon = ({ className }: { className?: string }) => {
+export const LoadingIcon = ({
+  className,
+  fill,
+}: {
+  className?: string;
+  fill?: string;
+}) => {
   return (
     <svg
       width="86"
@@ -116,9 +122,8 @@ export const LoadingIcon = ({ className }: { className?: string }) => {
         fillRule="evenodd"
         clipRule="evenodd"
         d="M17.8009 60.5045L67.6057 24.9025L67.6796 25.0058C67.6551 24.9713 67.6306 24.9369 67.606 24.9025C57.7747 11.1492 38.6557 7.96983 24.9024 17.8011C11.1492 27.6323 7.96978 46.7513 17.8009 60.5045Z"
-        fill="#C4C4C4"
         style={{
-          fill: "#C4C4C4",
+          fill: fill || "#C4C4C4",
           fillOpacity: 1,
         }}
       />
@@ -134,17 +139,15 @@ export const LoadingIcon = ({ className }: { className?: string }) => {
       />
       <path
         d="M25.5407 58.2704C25.5407 60.6288 23.6288 62.5407 21.2704 62.5407C18.9119 62.5407 17 60.6288 17 58.2704C17 55.9119 18.9119 54 21.2704 54C23.6288 54 25.5407 55.9119 25.5407 58.2704Z"
-        fill="#C4C4C4"
         style={{
-          fill: "#C4C4C4",
+          fill: fill || "#C4C4C4",
           fillOpacity: 1,
         }}
       />
       <path
         d="M68.3256 27.2472C68.3256 29.6056 66.4137 31.5175 64.0553 31.5175C61.6968 31.5175 59.7849 29.6056 59.7849 27.2472C59.7849 24.8887 61.6968 22.9768 64.0553 22.9768C66.4137 22.9768 68.3256 24.8887 68.3256 27.2472Z"
-        fill="#C4C4C4"
         style={{
-          fill: "#C4C4C4",
+          fill: fill || "#C4C4C4",
           fillOpacity: 1,
         }}
       />

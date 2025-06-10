@@ -23,7 +23,7 @@ const InboxPopup = ({ isOpen = false }: { isOpen: boolean }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className="fixed bottom-30 right-5 w-full max-w-2xl h-[580px]"
+          className="fixed bottom-30 right-5 w-full max-w-2xl h-[600px]"
           key="inbox-card"
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
