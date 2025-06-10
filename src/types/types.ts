@@ -11,7 +11,7 @@ export type Chat = {
   id: string;
   isNew: boolean;
   isSelf: boolean;
-  replyChatId: number | null;
+  replyChatId: string | null;
   senderName: string;
   message: string;
   date: string;

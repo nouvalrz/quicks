@@ -13,7 +13,7 @@ import { useTaskStore } from "../../store/useTaskStore";
 
 const TaskForm = ({ onClose }: { onClose: () => void }) => {
   const { submitTask } = useTaskStore();
-  const [open, setOpen] = useState<boolean>(false);
+  const [open, setOpen] = useState<boolean>(true);
   const [form, setForm] = useState<Task>({
     id: "",
     categoryName: "Personal Errands",

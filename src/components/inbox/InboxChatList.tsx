@@ -57,7 +57,7 @@ const InboxChatList = () => {
               </div>
               <div className="flex flex-col gap-1">
                 {chatList.map((chat) => (
-                  <InboxChatItem chat={chat} />
+                  <InboxChatItem chat={chat} key={chat.id} />
                 ))}
               </div>
             </div>

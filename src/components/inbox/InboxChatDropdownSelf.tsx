@@ -21,19 +21,13 @@ const InboxChatDropdownSelf = ({
   };
   return (
     <div className="flex flex-col rounded-md bg-white border border-primary-gray-2  min-w-32 items-stretch">
-      <button
-        onClick={handleEdit}
-        className="flex justify-start cursor-pointer"
-      >
+      <div onClick={handleEdit} className="flex justify-start cursor-pointer">
         <p className="text-primary pl-3 py-1">Edit</p>
-      </button>
+      </div>
       <hr className="border-primary-gray-2 w-full" />
-      <button
-        className="flex justify-start cursor-pointer"
-        onClick={handleDelete}
-      >
+      <div className="flex justify-start cursor-pointer" onClick={handleDelete}>
         <p className="text-red-600  pl-3 py-1">Delete</p>
-      </button>
+      </div>
     </div>
   );
 };

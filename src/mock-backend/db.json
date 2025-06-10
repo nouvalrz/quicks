@@ -96,6 +96,33 @@
           "senderName": "Obaidullah Amarkhil",
           "message": "I’ve uploaded the scanned green card and the draft. Please check if everything’s okay.",
           "date": "2021-06-09T19:45:00"
+        },
+        {
+          "id": "515761a1-141b-4681-95ba-26f990efea6d",
+          "date": "2025-06-10T10:25:11",
+          "isNew": false,
+          "isSelf": true,
+          "senderName": "You",
+          "message": "hahahaha",
+          "replyChatId": "22d716a1-19fa-4340-99f2-805065f7e40b"
+        },
+        {
+          "id": "5066380c-dfeb-4671-8252-9e09b5eca907",
+          "date": "2025-06-10T10:29:24",
+          "isNew": false,
+          "isSelf": true,
+          "senderName": "You",
+          "message": "hahaha",
+          "replyChatId": "22d716a1-19fa-4340-99f2-805065f7e40b"
+        },
+        {
+          "id": "5604d21a-d515-4067-9f48-df09403dd4e7",
+          "date": "2025-06-10T10:32:51",
+          "isNew": false,
+          "isSelf": true,
+          "senderName": "You",
+          "message": "okay",
+          "replyChatId": "22d716a1-19fa-4340-99f2-805065f7e40b"
         }
       ]
     },
@@ -210,14 +237,6 @@
   ],
   "tasks": [
     {
-      "id": "e4356c13-786e-4e5c-b7f4-9b51901c7b98",
-      "title": "Close off Case #012920- RODRIGUES, Amiguel",
-      "dueDate": "2021-06-12",
-      "description": "This case has been reviewed and marked for closure due to inactivity. All relevant documents have been archived.",
-      "completed": false,
-      "categoryName": "Urgent To-Do"
-    },
-    {
       "id": "ee5a0b76-045d-41b2-bcf3-eab23dc4812e",
       "title": "Set up documentation report for several Cases : Case 145443, Case 192829 and Case 182203",
       "dueDate": "2021-06-14",
@@ -272,6 +291,14 @@
       "description": "Contact the clinic to schedule a routine health check-up appointment for next week.",
       "completed": false,
       "categoryName": "Personal Errands"
+    },
+    {
+      "id": "6a386d1d-c838-4a54-b949-1c02290dcd20",
+      "categoryName": "Personal Errands",
+      "completed": false,
+      "description": "kjhkjhkl",
+      "dueDate": "2025-06-20",
+      "title": "halo bang"
     }
   ]
 }

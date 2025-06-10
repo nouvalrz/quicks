@@ -5,6 +5,9 @@ type InboxDetailStore = {
   initialized: boolean;
   inbox: Inbox | null;
   initInbox: (inbox: Inbox) => void;
+  replyChat: Chat | null;
+  setReplyChat: (value: Chat) => void;
+  clearReplyChat: () => void;
   sendChat: (chat: Chat) => Promise<void>;
   updateChat: (chatId: string, newMessage: string) => Promise<void>;
   deleteChat: (chatId: string) => Promise<void>;
@@ -24,6 +27,9 @@ export const useInboxDetailStore = create<InboxDetailStore>((set, get) => {
       set({ initialized: false });
       set({ inbox: inbox, initialized: true });
     },
+    replyChat: null,
+    setReplyChat: (value) => set({ replyChat: value }),
+    clearReplyChat: () => set({ replyChat: null }),
     inputMessageValue: "",
     setInputMessageValue: (value) => set({ inputMessageValue: value }),
     chatUpdateId: null,
@@ -243,7 +249,7 @@ export const useInboxDetailStore = create<InboxDetailStore>((set, get) => {
       }
     },
     clearInbox: () => {
-      set({ inbox: null, initialized: false });
+      set({ inbox: null, replyChat: null, initialized: false });
     },
   };
 });

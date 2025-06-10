@@ -5,6 +5,8 @@ import { formatTimeOnly } from "../../lib/formatDate";
 import { HorizontalMoreIcon, LoadingIcon } from "../Icons";
 import { useEffect, useRef, useState } from "react";
 import InboxChatDropdownSelf from "./InboxChatDropdownSelf";
+import InboxChatDropdownOther from "./InboxChatDropdownOther";
+import { useInboxDetailStore } from "../../store/useInboxDetailStore";
 
 const itemColors = [
   {
@@ -18,10 +20,16 @@ const itemColors = [
 ];
 
 const InboxChatItem = ({ chat }: { chat: Chat }) => {
+  const { setReplyChat } = useInboxDetailStore();
   const color = pickRandomBySeed(itemColors, chat.senderName);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const handleReply = () => {
+    setReplyChat(chat);
+    setDropdownOpen(false);
+  };
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -74,6 +82,14 @@ const InboxChatItem = ({ chat }: { chat: Chat }) => {
                 className="absolute -bottom-18 left-1/2 translate-x-[-50%] "
               >
                 <InboxChatDropdownSelf chat={chat} onClose={() => {}} />
+              </div>
+            )}
+            {dropdownOpen && !chat.isSelf && (
+              <div
+                ref={dropdownRef}
+                className="absolute -bottom-18 left-1/2 translate-x-[-50%] "
+              >
+                <InboxChatDropdownOther onReply={handleReply} />
               </div>
             )}
           </button>
