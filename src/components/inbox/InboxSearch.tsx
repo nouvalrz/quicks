@@ -5,11 +5,12 @@ interface InboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
 }
 
 const InboxSearch = (props: InboxProps) => {
+  const { onSearch, ...rest } = props;
   return (
     <div
       className={`
         flex items-center gap-2 px-14 py-1 rounded-md border
-        border-primary-gray-2
+        border-primary-gray-2s
         focus-within:ring-2 focus-within:ring-primary
         focus-within:border-primary transition
       `}
@@ -17,8 +18,8 @@ const InboxSearch = (props: InboxProps) => {
       <input
         className="flex-1 outline-none bg-transparent"
         placeholder="Search"
-        {...props}
-        onChange={(e) => props.onSearch(e.target.value)}
+        {...rest}
+        onChange={(e) => onSearch(e.target.value)}
       />
       <SearchIcon className="size-5" fill="gray" />
     </div>

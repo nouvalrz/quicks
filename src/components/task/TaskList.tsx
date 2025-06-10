@@ -50,10 +50,10 @@ const TaskList = () => {
       {initialized && (
         <div className="h-full flex flex-col flex-grow gap-6 mt-6">
           {filteredTasks.map((task) => (
-            <>
+            <div key={task.id}>
               <TaskItem task={task} key={task.id} />
-              <hr className="border-primary-gray-1" />
-            </>
+              <hr className="border-primary-gray-1 mt-6" />
+            </div>
           ))}
           {showForm && <TaskForm onClose={toggleShowForm} />}
 

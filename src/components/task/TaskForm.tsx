@@ -21,6 +21,7 @@ const TaskForm = ({ onClose }: { onClose: () => void }) => {
     description: "",
     dueDate: "",
     title: "",
+    tags: [],
   });
 
   const handleFormChange = (

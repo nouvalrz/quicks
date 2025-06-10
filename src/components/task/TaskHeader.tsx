@@ -16,9 +16,7 @@ const TaskHeader = ({
         value={categoryValue}
         onChange={(e) => onCategoryChange(e.target.value)}
       >
-        <option value="" selected>
-          My Tasks
-        </option>
+        <option value="">My Tasks</option>
         <option value="Personal Errands">Personal Errands</option>
         <option value="Urgent To-Do">Urgent To-Do</option>
       </select>

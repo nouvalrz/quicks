@@ -45,7 +45,7 @@
         },
         {
           "id": "fdf85de7-05a0-4c13-94c9-5971f265f2c3",
-          "isNew": true,
+          "isNew": false,
           "isSelf": false,
           "replyChatId": null,
           "senderName": "Obaidullah Amarkhil",
@@ -90,12 +90,30 @@
         },
         {
           "id": "22d716a1-19fa-4340-99f2-805065f7e40b",
-          "isNew": true,
+          "isNew": false,
           "isSelf": false,
           "replyChatId": null,
           "senderName": "Obaidullah Amarkhil",
           "message": "I’ve uploaded the scanned green card and the draft. Please check if everything’s okay.",
           "date": "2021-06-09T19:45:00"
+        },
+        {
+          "id": "a4e7d2f8-6727-4666-bdaf-04334bfd8645",
+          "date": "2025-06-10T12:41:37",
+          "isNew": false,
+          "isSelf": true,
+          "senderName": "You",
+          "message": "thank you! yes",
+          "replyChatId": "22d716a1-19fa-4340-99f2-805065f7e40b"
+        },
+        {
+          "id": "a960fe28-b10d-4549-a484-7728f0b0badf",
+          "date": "2025-06-10T12:41:50",
+          "isNew": false,
+          "isSelf": true,
+          "senderName": "You",
+          "message": "halo",
+          "replyChatId": null
         }
       ]
     },
@@ -198,21 +216,12 @@
         },
         {
           "id": "e6f89c74-6507-4c41-84f2-82ed406b6c8d",
-          "isNew": false,
+          "isNew": true,
           "isSelf": true,
           "replyChatId": null,
           "senderName": "You",
           "message": "Got it. Thanks!",
           "date": "2021-01-06T12:21:00"
-        },
-        {
-          "id": "32f02296-d9b4-48d2-b86f-8ad7332e1242",
-          "date": "2025-06-10T12:29:02",
-          "isNew": false,
-          "isSelf": true,
-          "senderName": "You",
-          "message": "done",
-          "replyChatId": null
         }
       ]
     }
@@ -221,11 +230,13 @@
     {
       "id": "e4356c13-786e-4e5c-b7f4-9b51901c7b98",
       "title": "Close off Case #012920- RODRIGUES, Amiguel",
-      "dueDate": "2021-06-12",
-      "description": "This case has been reviewed and marked for closure due to inactivity. All relevant documents have been archived.",
+      "dueDate": "2021-06-10",
+      "description": "This case has been reviewed and marked for closure due to inactivity. All relevant documents have been archived. HAHAHQA",
       "completed": false,
       "categoryName": "Urgent To-Do",
-      "tags": []
+      "tags": [
+        "Important ASAP"
+      ]
     },
     {
       "id": "ee5a0b76-045d-41b2-bcf3-eab23dc4812e",
@@ -266,11 +277,13 @@
     {
       "id": "af15fd3b-91df-4056-bd3f-d679f9edbb54",
       "title": "Pick up medication from pharmacy",
-      "dueDate": "2021-06-13",
+      "dueDate": "2021-06-05",
       "description": "Collect prescribed medication from the pharmacy and ensure all refills are included.",
       "completed": false,
       "categoryName": "Personal Errands",
-      "tags": []
+      "tags": [
+        "Important ASAP"
+      ]
     },
     {
       "id": "2b1ea1b5-74e0-4ae6-aabe-21e09c4f83ef",
@@ -289,6 +302,17 @@
       "completed": false,
       "categoryName": "Personal Errands",
       "tags": []
+    },
+    {
+      "id": "0a73d3cb-0719-4acd-8105-c85e8c0d689d",
+      "categoryName": "Personal Errands",
+      "completed": false,
+      "description": "asdlkjalksdjasd",
+      "dueDate": "2025-06-05",
+      "title": "lkjaslkdjasd",
+      "tags": [
+        "Appointments"
+      ]
     }
   ]
 }
