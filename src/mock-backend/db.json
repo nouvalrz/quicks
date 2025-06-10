@@ -98,31 +98,40 @@
           "date": "2021-06-09T19:45:00"
         },
         {
-          "id": "515761a1-141b-4681-95ba-26f990efea6d",
-          "date": "2025-06-10T10:25:11",
+          "id": "6bd39451-782c-4280-86b2-192718848a37",
+          "date": "2025-06-10T11:05:48",
           "isNew": false,
           "isSelf": true,
           "senderName": "You",
-          "message": "hahahaha",
+          "message": "thanks",
           "replyChatId": "22d716a1-19fa-4340-99f2-805065f7e40b"
         },
         {
-          "id": "5066380c-dfeb-4671-8252-9e09b5eca907",
-          "date": "2025-06-10T10:29:24",
+          "id": "abe8e716-e094-4513-b3a4-c8b2120c56fe",
+          "date": "2025-06-10T11:08:06",
           "isNew": false,
           "isSelf": true,
           "senderName": "You",
-          "message": "hahaha",
-          "replyChatId": "22d716a1-19fa-4340-99f2-805065f7e40b"
+          "message": "good to know!",
+          "replyChatId": "c2f601aa-7f7f-4a16-9a1d-893a00ee5ff9"
         },
         {
-          "id": "5604d21a-d515-4067-9f48-df09403dd4e7",
-          "date": "2025-06-10T10:32:51",
+          "id": "b899aec2-2172-4e8d-a2ce-0f55abe4daf5",
+          "date": "2025-06-10T11:08:54",
           "isNew": false,
           "isSelf": true,
           "senderName": "You",
-          "message": "okay",
-          "replyChatId": "22d716a1-19fa-4340-99f2-805065f7e40b"
+          "message": "u well",
+          "replyChatId": "fdf85de7-05a0-4c13-94c9-5971f265f2c3"
+        },
+        {
+          "id": "ab8062b2-e969-435f-b447-cc333314a505",
+          "date": "2025-06-10T11:16:12",
+          "isNew": false,
+          "isSelf": true,
+          "senderName": "You",
+          "message": "okay noted",
+          "replyChatId": "c239e138-75e7-4020-9293-98d9e276364f"
         }
       ]
     },

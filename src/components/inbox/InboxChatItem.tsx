@@ -20,11 +20,15 @@ const itemColors = [
 ];
 
 const InboxChatItem = ({ chat }: { chat: Chat }) => {
-  const { setReplyChat } = useInboxDetailStore();
+  const { setReplyChat, getChat } = useInboxDetailStore();
   const color = pickRandomBySeed(itemColors, chat.senderName);
   const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
 
   const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const replyedChat: Chat | null = chat.replyChatId
+    ? getChat(chat.replyChatId)
+    : null;
 
   const handleReply = () => {
     setReplyChat(chat);
@@ -65,6 +69,11 @@ const InboxChatItem = ({ chat }: { chat: Chat }) => {
       >
         {chat.senderName}
       </p>
+      {replyedChat && (
+        <div className="max-w-lg p-2 border border-primary-gray-3 bg-primary-gray-4 rounded-md mb-2">
+          <p>{replyedChat.message}</p>
+        </div>
+      )}
       <div className="flex gap-1 items-start">
         {(chat.sendingStatus === undefined ||
           chat.sendingStatus === "success") && (

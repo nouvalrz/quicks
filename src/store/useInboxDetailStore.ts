@@ -17,6 +17,7 @@ type InboxDetailStore = {
   chatUpdateId: string | null;
   setChatUpdate: (id: string, message: string) => void;
   setInputMessageValue: (value: string) => void;
+  getChat: (chatId: string) => Chat | null;
 };
 
 export const useInboxDetailStore = create<InboxDetailStore>((set, get) => {
@@ -28,6 +29,12 @@ export const useInboxDetailStore = create<InboxDetailStore>((set, get) => {
       set({ inbox: inbox, initialized: true });
     },
     replyChat: null,
+    getChat: (chatId): Chat => {
+      const inbox = get().inbox;
+      const chat = inbox!.chats.find((chat) => chat.id === chatId);
+
+      return chat!;
+    },
     setReplyChat: (value) => set({ replyChat: value }),
     clearReplyChat: () => set({ replyChat: null }),
     inputMessageValue: "",
