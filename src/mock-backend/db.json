@@ -85,9 +85,8 @@
           "isSelf": true,
           "replyChatId": null,
           "senderName": "You",
-          "message": "Thanks, Obaidullah. Let me know once it’s dddd so Mary can review.",
-          "date": "2021-06-09T19:43:00",
-          "sendingStatus": "success"
+          "message": "Thanks, Obaidullah. Let me know once it’s uploaded so Mary can review.",
+          "date": "2021-06-09T19:43:00"
         },
         {
           "id": "22d716a1-19fa-4340-99f2-805065f7e40b",
@@ -205,15 +204,6 @@
           "senderName": "You",
           "message": "Got it. Thanks!",
           "date": "2021-01-06T12:21:00"
-        },
-        {
-          "id": "c744e4a0-51f0-45a9-b4ce-9c17a21cb440",
-          "date": "2025-06-10T05:48:27",
-          "isNew": false,
-          "isSelf": true,
-          "senderName": "You",
-          "message": "asasas",
-          "replyChatId": null
         }
       ]
     }
@@ -222,7 +212,7 @@
     {
       "id": "e4356c13-786e-4e5c-b7f4-9b51901c7b98",
       "title": "Close off Case #012920- RODRIGUES, Amiguel",
-      "dueDate": "2025-06-13",
+      "dueDate": "2021-06-12",
       "description": "This case has been reviewed and marked for closure due to inactivity. All relevant documents have been archived.",
       "completed": false,
       "categoryName": "Urgent To-Do"
@@ -230,7 +220,7 @@
     {
       "id": "ee5a0b76-045d-41b2-bcf3-eab23dc4812e",
       "title": "Set up documentation report for several Cases : Case 145443, Case 192829 and Case 182203",
-      "dueDate": "2025-06-12",
+      "dueDate": "2021-06-14",
       "description": "Compile a comprehensive report for the listed cases including summaries, financials, and communication logs.",
       "completed": false,
       "categoryName": "Urgent To-Do"
@@ -282,22 +272,6 @@
       "description": "Contact the clinic to schedule a routine health check-up appointment for next week.",
       "completed": false,
       "categoryName": "Personal Errands"
-    },
-    {
-      "id": "ff7b7b03-5e86-40ba-856a-2fd167062a2a",
-      "categoryName": "Personal Errands",
-      "completed": false,
-      "description": "beli makan ganti",
-      "dueDate": "2025-06-14",
-      "title": "makang bang"
-    },
-    {
-      "id": "4e0ddef4-d5b7-40be-8317-de55dda9c747",
-      "categoryName": "Personal Errands",
-      "completed": false,
-      "description": "halooo",
-      "dueDate": "2025-06-13",
-      "title": "keren nih"
     }
   ]
 }

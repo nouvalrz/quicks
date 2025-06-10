@@ -23,7 +23,6 @@ const InboxChatItem = ({ chat }: { chat: Chat }) => {
 
   const dropdownRef = useRef<HTMLDivElement>(null);
 
-  // Tutup dropdown saat klik di luar
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (

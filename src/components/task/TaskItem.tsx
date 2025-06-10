@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback, useEffect, useRef, useState } from "react";
 import type { Task } from "../../types/types";
 import { formatDateOnlyWithSlash, formatDaysLeft } from "../../lib/formatDate";
 import {
@@ -12,14 +12,21 @@ import { AnimatePresence, motion } from "motion/react";
 import debounce from "lodash.debounce";
 import { useTaskStore } from "../../store/useTaskStore";
 import clsx from "clsx";
+import TaskDropdown from "./TaskDropdown";
 
 const TaskItem = ({ task }: { task: Task }) => {
   const [open, setOpen] = useState<boolean>(false);
+  const [dropdownOpen, setDropdownOpen] = useState<boolean>(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
-  const { updateDescription, updateCompleted, updateDueDate } = useTaskStore();
+  const { updateDescription, updateCompleted, updateDueDate, deleteTask } =
+    useTaskStore();
 
   // for debounce purpose
   const [description, setDescription] = useState<string>(task.description);
+
+  const toggleOpen = () => setOpen(!open);
+  const toggleDropdownOpen = () => setDropdownOpen(!dropdownOpen);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const debouncedUpdateDescription = useCallback(
@@ -29,6 +36,11 @@ const TaskItem = ({ task }: { task: Task }) => {
     []
   );
 
+  const handleDelete = () => {
+    deleteTask(task.id);
+    setDropdownOpen(false);
+  };
+
   useEffect(() => {
     if (description !== task.description) {
       debouncedUpdateDescription(description);
@@ -36,7 +48,24 @@ const TaskItem = ({ task }: { task: Task }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [description, task.description]);
 
-  const toggleOpen = () => setOpen(!open);
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setDropdownOpen(false);
+      }
+    };
+
+    if (dropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [dropdownOpen]);
 
   return (
     <div className="flex gap-3 items-start">
@@ -61,8 +90,16 @@ const TaskItem = ({ task }: { task: Task }) => {
             <button onClick={toggleOpen} className="cursor-pointer">
               {open ? <ChevronUpIcon /> : <ChevronDownIcon />}
             </button>
-            <button>
+            <button
+              onClick={toggleDropdownOpen}
+              className="relative cursor-pointer"
+            >
               <HorizontalMoreIcon className="size-6" />
+              {dropdownOpen && (
+                <div className="absolute -bottom-9 right-0 " ref={dropdownRef}>
+                  <TaskDropdown onDelete={handleDelete} />
+                </div>
+              )}
             </button>
           </div>
         </div>

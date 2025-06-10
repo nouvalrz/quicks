@@ -10,6 +10,7 @@ type TaskStore = {
   updateCompleted: (taskId: string, completed: boolean) => Promise<void>;
   updateDueDate: (taskId: string, dueDate: string) => Promise<void>;
   submitTask: (task: Task) => Promise<void>;
+  deleteTask: (taskId: string) => Promise<void>;
 };
 
 export const useTaskStore = create<TaskStore>((set, get) => {
@@ -43,6 +44,25 @@ export const useTaskStore = create<TaskStore>((set, get) => {
             tasks: state.tasks.filter((task) => task.id !== taskData.id),
           };
         });
+      }
+    },
+    deleteTask: async (taskId) => {
+      const oldTask = get().tasks;
+      set((state) => {
+        return {
+          tasks: state.tasks.filter((task) => task.id !== taskId),
+        };
+      });
+
+      try {
+        await fetch(`/api/tasks/${taskId}`, {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+      } catch (error) {
+        set({ tasks: [...oldTask] });
       }
     },
     updateDescription: async (taskId, description) => {
