@@ -17,3 +17,12 @@ export type Chat = {
   date: string;
   sendingStatus?: "loading" | "success" | "error";
 };
+
+export type Task = {
+  id: string;
+  title: string;
+  dueDate: string;
+  description: string;
+  completed: boolean;
+  categoryName: "Personal Errands" | "Urgent To-Do" | "";
+};

@@ -3,8 +3,10 @@ import { InboxIcon } from "./Icons";
 
 const InboxFab = ({
   onClick,
+  hideLabel = false,
 }: {
   onClick: (value: "task" | "inbox" | null) => void;
+  hideLabel?: boolean;
 }) => {
   const handleClick = () => {
     onClick("inbox");
@@ -19,9 +21,11 @@ const InboxFab = ({
       animate={{ opacity: 1, x: 0 }}
       exit={{ opacity: 0, x: 50 }}
     >
-      <p className="absolute -top-8 text-white left-1/2 transform -translate-x-1/2 text-sm">
-        Inbox
-      </p>
+      {!hideLabel && (
+        <p className="absolute -top-8 text-white left-1/2 transform -translate-x-1/2 text-sm">
+          Inbox
+        </p>
+      )}
       <button
         className="p-3 rounded-full bg-primary-gray-4 cursor-pointer"
         onClick={handleClick}

@@ -13,7 +13,7 @@ const TaskPopup = ({ isOpen = false }: { isOpen: boolean }) => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 50 }}
         >
-          <BaseCard className="w-full h-full ">
+          <BaseCard className="w-full h-full pb-6">
             <TaskList />
           </BaseCard>
         </motion.div>

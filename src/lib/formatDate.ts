@@ -34,3 +34,27 @@ export const formatTimeOnly = (value: string): string => {
 
   return timeFormatted;
 };
+
+export const formatDateOnlyWithSlash = (value: string): string => {
+  const [year, month, day] = value.split("-");
+  const formatted = `${day}/${month}/${year}`;
+
+  return formatted;
+};
+
+export const formatDaysLeft = (value: string): string | null => {
+  const today = new Date();
+  const dueDate = new Date(value);
+
+  today.setHours(0, 0, 0, 0);
+  dueDate.setHours(0, 0, 0, 0);
+
+  const diffTime = dueDate.getTime() - today.getTime();
+  const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+  if (diffDays >= 0 && diffDays <= 7) {
+    return `${diffDays} Day${diffDays !== 1 ? "s" : ""} Left`;
+  } else {
+    return null;
+  }
+};

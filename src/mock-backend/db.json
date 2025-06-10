@@ -85,8 +85,9 @@
           "isSelf": true,
           "replyChatId": null,
           "senderName": "You",
-          "message": "Thanks, Obaidullah. Let me know once it’s uploaded so Mary can review.",
-          "date": "2021-06-09T19:43:00"
+          "message": "Thanks, Obaidullah. Let me know once it’s dddd so Mary can review.",
+          "date": "2021-06-09T19:43:00",
+          "sendingStatus": "success"
         },
         {
           "id": "22d716a1-19fa-4340-99f2-805065f7e40b",
@@ -96,16 +97,6 @@
           "senderName": "Obaidullah Amarkhil",
           "message": "I’ve uploaded the scanned green card and the draft. Please check if everything’s okay.",
           "date": "2021-06-09T19:45:00"
-        },
-        {
-          "id": "1daefffa-e22a-4399-b938-0ba37e905a89",
-          "date": "2025-06-10T02:06:49",
-          "isNew": false,
-          "isSelf": true,
-          "senderName": "You",
-          "message": "keren",
-          "replyChatId": null,
-          "sendingStatus": "success"
         }
       ]
     },
@@ -216,6 +207,88 @@
           "date": "2021-01-06T12:21:00"
         }
       ]
+    }
+  ],
+  "tasks": [
+    {
+      "id": "e4356c13-786e-4e5c-b7f4-9b51901c7b98",
+      "title": "Close off Case #012920- RODRIGUES, Amiguel",
+      "dueDate": "2025-06-13",
+      "description": "This case has been reviewed and marked for closure due to inactivity. All relevant documents have been archived.",
+      "completed": false,
+      "categoryName": "Urgent To-Do"
+    },
+    {
+      "id": "ee5a0b76-045d-41b2-bcf3-eab23dc4812e",
+      "title": "Set up documentation report for several Cases : Case 145443, Case 192829 and Case 182203",
+      "dueDate": "2021-06-14",
+      "description": "Compile a comprehensive report for the listed cases including summaries, financials, and communication logs.",
+      "completed": false,
+      "categoryName": "Urgent To-Do"
+    },
+    {
+      "id": "2b1d6de6-cd36-44a1-b7b5-2a0b71d223e2",
+      "title": "Set up appointment with Dr Blake",
+      "dueDate": "2021-06-22",
+      "description": "Arrange a follow-up consultation to review recent lab results and update the treatment plan.",
+      "completed": false,
+      "categoryName": "Personal Errands"
+    },
+    {
+      "id": "63e74b84-1e7d-46b6-9782-7e7f03b324e0",
+      "title": "Contact Mr Caleb – video conference?",
+      "dueDate": "2021-06-03",
+      "description": "Follow up with Mr. Caleb to confirm the date and time for the scheduled video conference regarding project updates.",
+      "completed": true,
+      "categoryName": "Urgent To-Do"
+    },
+    {
+      "id": "d89f93a1-b3e1-49d7-9ce3-bd013c15954a",
+      "title": "Assign 3 homework to Client A",
+      "dueDate": "2021-06-02",
+      "description": "Prepare and assign three practice exercises for Client A based on their last session's progress.",
+      "completed": true,
+      "categoryName": "Personal Errands"
+    },
+    {
+      "id": "af15fd3b-91df-4056-bd3f-d679f9edbb54",
+      "title": "Pick up medication from pharmacy",
+      "dueDate": "2021-06-13",
+      "description": "Collect prescribed medication from the pharmacy and ensure all refills are included.",
+      "completed": false,
+      "categoryName": "Personal Errands"
+    },
+    {
+      "id": "2b1ea1b5-74e0-4ae6-aabe-21e09c4f83ef",
+      "title": "Submit urgent compliance form",
+      "dueDate": "2021-06-10",
+      "description": "Complete the required compliance documentation and submit it before end of business day.",
+      "completed": false,
+      "categoryName": "Urgent To-Do"
+    },
+    {
+      "id": "3b15f0e4-2d85-4655-8410-23cc3c5dd91f",
+      "title": "Book annual health check-up",
+      "dueDate": "2021-06-18",
+      "description": "Contact the clinic to schedule a routine health check-up appointment for next week.",
+      "completed": false,
+      "categoryName": "Personal Errands"
+    },
+    {
+      "id": "ff7b7b03-5e86-40ba-856a-2fd167062a2a",
+      "categoryName": "Personal Errands",
+      "completed": false,
+      "description": "beli makan ganti",
+      "dueDate": "2025-06-14",
+      "title": "makang bang"
+    },
+    {
+      "id": "4e0ddef4-d5b7-40be-8317-de55dda9c747",
+      "categoryName": "Personal Errands",
+      "completed": false,
+      "description": "halooo",
+      "dueDate": "2025-06-13",
+      "title": "keren nih"
     }
   ]
 }

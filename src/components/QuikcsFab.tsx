@@ -21,8 +21,12 @@ const QuikcsFab = () => {
       <AnimatePresence>
         {open && (
           <>
-            {selected !== "task" && <TaskFab onClick={setSelected} />}
-            {selected !== "inbox" && <InboxFab onClick={setSelected} />}
+            {selected !== "task" && (
+              <TaskFab onClick={setSelected} hideLabel={!!selected} />
+            )}
+            {selected !== "inbox" && (
+              <InboxFab onClick={setSelected} hideLabel={!!selected} />
+            )}
           </>
         )}
       </AnimatePresence>

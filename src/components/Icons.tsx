@@ -292,3 +292,124 @@ export const HorizontalMoreIcon = ({
     </svg>
   );
 };
+
+export const ChevronUpIcon = ({
+  className,
+  fill,
+}: {
+  className?: string;
+  fill?: string;
+}) => {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx(className)}
+    >
+      <g id="expand_more_24px">
+        <path
+          id="icon/navigation/expand_more_24px"
+          d="M6.175 13.0875L10 9.27084L13.825 13.0875L15 11.9125L10 6.9125L5 11.9125L6.175 13.0875Z"
+          style={{
+            fill: fill || "#4F4F4F",
+            fillOpacity: 1,
+          }}
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const ChevronDownIcon = ({
+  className,
+  fill,
+}: {
+  className?: string;
+  fill?: string;
+}) => {
+  return (
+    <svg
+      width="20"
+      height="20"
+      viewBox="0 0 20 20"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx(className)}
+    >
+      <g id="expand_more_24px">
+        <path
+          id="icon/navigation/expand_more_24px"
+          d="M13.825 6.91251L10 10.7292L6.175 6.91251L5 8.08751L10 13.0875L15 8.08751L13.825 6.91251Z"
+          style={{
+            fill: fill || "#4F4F4F",
+            fillOpacity: 1,
+          }}
+        />
+      </g>
+    </svg>
+  );
+};
+
+export const PencilIcon = ({
+  className,
+  fill,
+}: {
+  className?: string;
+  fill?: string;
+}) => {
+  return (
+    <svg
+      width="24"
+      height="23"
+      viewBox="0 0 24 23"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx(className)}
+    >
+      <path
+        fillRule="evenodd"
+        clipRule="evenodd"
+        d="M19.3092 0C18.9949 0 18.668 0.125731 18.4291 0.36462L16.1282 2.6655L20.8431 7.38041L23.144 5.07953C23.6343 4.58918 23.6343 3.79708 23.144 3.30673L20.2019 0.36462C19.9504 0.113158 19.6361 0 19.3092 0ZM14.7831 7.569L15.9398 8.72573L4.54857 20.117H3.39185V18.9602L14.7831 7.569ZM0.877197 17.9167L14.783 4.01081L19.498 8.72572L5.59211 22.6316H0.877197V17.9167Z"
+        style={{
+          fill: fill || "#4F4F4F",
+          fillOpacity: 1,
+        }}
+      />
+    </svg>
+  );
+};
+
+export const ClockIcon = ({
+  className,
+  fill,
+}: {
+  className?: string;
+  fill?: string;
+}) => {
+  return (
+    <svg
+      width="31"
+      height="31"
+      viewBox="0 0 31 31"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      className={clsx(className)}
+    >
+      <g id="schedule_24px">
+        <path
+          id="icon/action/schedule_24px"
+          fillRule="evenodd"
+          clipRule="evenodd"
+          d="M15.2508 2.51465C8.31048 2.51465 2.69031 8.1474 2.69031 15.0877C2.69031 22.0281 8.31048 27.6608 15.2508 27.6608C22.2038 27.6608 27.8365 22.0281 27.8365 15.0877C27.8365 8.1474 22.2038 2.51465 15.2508 2.51465ZM15.2637 25.1462C9.70636 25.1462 5.20519 20.6451 5.20519 15.0878C5.20519 9.53045 9.70636 5.02928 15.2637 5.02928C20.821 5.02928 25.3221 9.53045 25.3221 15.0878C25.3221 20.6451 20.821 25.1462 15.2637 25.1462ZM14.0061 8.80121H15.8921V15.4021L21.55 18.7591L20.607 20.3056L14.0061 16.3451V8.80121Z"
+          style={{
+            fill: fill || "#4F4F4F",
+            fillOpacity: 1,
+          }}
+        />
+      </g>
+    </svg>
+  );
+};
