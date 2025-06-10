@@ -1,7 +1,8 @@
 import { SearchIcon } from "../Icons";
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-interface InboxProps extends React.InputHTMLAttributes<HTMLInputElement> {}
+interface InboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+  onSearch: (value: string) => void;
+}
 
 const InboxSearch = (props: InboxProps) => {
   return (
@@ -17,6 +18,7 @@ const InboxSearch = (props: InboxProps) => {
         className="flex-1 outline-none bg-transparent"
         placeholder="Search"
         {...props}
+        onChange={(e) => props.onSearch(e.target.value)}
       />
       <SearchIcon className="size-5" fill="gray" />
     </div>
