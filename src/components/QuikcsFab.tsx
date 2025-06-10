@@ -5,6 +5,7 @@ import InboxFab from "./InboxFab";
 import TaskFab from "./TaskFab";
 import clsx from "clsx";
 import InboxPopup from "./inbox/InboxPopup";
+import TaskPopup from "./task/TaskPopup";
 
 const QuikcsFab = () => {
   const [open, setOpen] = useState<boolean>(false);
@@ -56,6 +57,7 @@ const QuikcsFab = () => {
         </div>
       )}
       {selected === "inbox" && <InboxPopup isOpen={selected === "inbox"} />}
+      {selected === "task" && <TaskPopup isOpen={selected === "task"} />}
     </div>
   );
 };

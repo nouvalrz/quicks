@@ -8,9 +8,9 @@ type InboxViewType = "list" | "detail";
 
 const InboxPopup = ({ isOpen = false }: { isOpen: boolean }) => {
   const [selectedView, setSelectedView] = useState<InboxViewType>("list");
-  const [detailIdSelected, setDetailIdSelected] = useState<number | null>(null);
+  const [detailIdSelected, setDetailIdSelected] = useState<string | null>(null);
 
-  const handleToDetail = (id: number) => {
+  const handleToDetail = (id: string) => {
     setDetailIdSelected(id);
     setSelectedView("detail");
   };
@@ -29,7 +29,7 @@ const InboxPopup = ({ isOpen = false }: { isOpen: boolean }) => {
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: 50 }}
         >
-          <BaseCard className="w-full h-full overflow-y-scroll">
+          <BaseCard className="w-full h-full ">
             {selectedView === "list" && (
               <InboxList onItemClick={handleToDetail} />
             )}

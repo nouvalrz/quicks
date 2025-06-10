@@ -1,5 +1,5 @@
 export type Inbox = {
-  id: number;
+  id: string;
   isGroup: boolean;
   inboxTitle: string;
   participants: number;
@@ -8,11 +8,12 @@ export type Inbox = {
 };
 
 export type Chat = {
-  id: number;
+  id: string;
   isNew: boolean;
   isSelf: boolean;
   replyChatId: number | null;
   senderName: string;
   message: string;
   date: string;
+  sendingStatus?: "loading" | "success" | "error";
 };

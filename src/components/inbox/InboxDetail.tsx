@@ -4,18 +4,47 @@ import type { Inbox } from "../../types/types";
 import { fetcher } from "../../lib/fetcher";
 import InboxLoading from "./InboxLoading";
 import { useInboxDetailStore } from "../../store/useInboxDetailStore";
-import { useEffect } from "react";
+import { useEffect, useRef, useState } from "react";
 import InboxChatList from "./InboxChatList";
+import InboxChatForm from "./InboxChatForm";
 
-const InboxDetail = ({ id, onBack }: { id: number; onBack: () => void }) => {
+const InboxDetail = ({ id, onBack }: { id: string; onBack: () => void }) => {
   const { initInbox, initialized } = useInboxDetailStore();
-  const { data, isLoading, error } = useSWR<Inbox>("/api/inbox/" + id, fetcher);
+  const now = useRef(Date.now()).current;
+  const { data, isLoading, error } = useSWR<Inbox>(
+    `/api/inbox/${id}?t=${now}`,
+    fetcher
+  );
+
+  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [isScrollBottom, setIsScrollBottom] = useState<boolean>(true);
+
+  const scrollToBottom = () => {
+    const div = scrollRef.current;
+    if (div) {
+      div.scrollTo({ top: div.scrollHeight, behavior: "smooth" });
+    }
+  };
+
+  const handleScroll = () => {
+    const div = scrollRef.current;
+
+    if (div) {
+      setIsScrollBottom(div.scrollHeight - div.scrollTop === div.clientHeight);
+    }
+  };
 
   useEffect(() => {
     if (data) {
       initInbox(data);
     }
   }, [data, initInbox]);
+
+  useEffect(() => {
+    if (initialized) {
+      scrollToBottom();
+    }
+  }, [initialized]);
 
   return (
     <div className="h-full">
@@ -24,11 +53,24 @@ const InboxDetail = ({ id, onBack }: { id: number; onBack: () => void }) => {
           <InboxLoading />
         </div>
       ) : (
-        <div className="flex flex-col h-full">
+        <div className="flex flex-col h-full relative">
           <InboxDetailHeader onBack={onBack} />
-          <div className="flex-grow  w-full overflow-scroll my-4 ">
+          <div
+            className="flex-grow  w-full overflow-scroll my-4 "
+            ref={scrollRef}
+            onScroll={handleScroll}
+          >
             <InboxChatList />
           </div>
+          <InboxChatForm scrollToBottom={scrollToBottom} />
+          {!isScrollBottom && (
+            <div
+              className="py-2 px-4 rounded bg-sticker-water absolute bottom-18 left-1/2 translate-x-[-50%] cursor-pointer"
+              onClick={scrollToBottom}
+            >
+              <p className="text-primary font-bold">New Message</p>
+            </div>
+          )}
         </div>
       )}
 

@@ -28,10 +28,10 @@ const InboxChatList = () => {
 
   return (
     <div className="h-full  flex flex-col px-8">
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6  flex-grow">
         {Object.entries(groupedChatsbyDate).map(([groupLabel, chatList]) => {
           return (
-            <>
+            <div key={groupLabel}>
               <div className="flex gap-3 items-center">
                 <hr
                   className={clsx("flex-grow ", {
@@ -60,7 +60,7 @@ const InboxChatList = () => {
                   <InboxChatItem chat={chat} />
                 ))}
               </div>
-            </>
+            </div>
           );
         })}
       </div>

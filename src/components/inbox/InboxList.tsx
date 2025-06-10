@@ -8,7 +8,7 @@ import InboxItem from "./InboxItem";
 const InboxList = ({
   onItemClick,
 }: {
-  onItemClick: (value: number) => void;
+  onItemClick: (value: string) => void;
 }) => {
   const { data, isLoading, error } = useSWR<Inbox[]>("/api/inbox", fetcher);
 
@@ -23,7 +23,7 @@ const InboxList = ({
         <div className="flex flex-col">
           {data &&
             data.map((inbox, index) => (
-              <>
+              <div key={index}>
                 <InboxItem
                   inbox={inbox}
                   onClick={() => onItemClick(inbox.id)}
@@ -31,7 +31,7 @@ const InboxList = ({
                 {index !== data.length - 1 && (
                   <hr className="border-primary-gray-2" />
                 )}
-              </>
+              </div>
             ))}
         </div>
       )}
