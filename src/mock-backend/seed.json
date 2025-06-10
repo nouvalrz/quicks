@@ -215,7 +215,8 @@
       "dueDate": "2021-06-12",
       "description": "This case has been reviewed and marked for closure due to inactivity. All relevant documents have been archived.",
       "completed": false,
-      "categoryName": "Urgent To-Do"
+      "categoryName": "Urgent To-Do",
+      "tags": []
     },
     {
       "id": "ee5a0b76-045d-41b2-bcf3-eab23dc4812e",
@@ -223,7 +224,8 @@
       "dueDate": "2021-06-14",
       "description": "Compile a comprehensive report for the listed cases including summaries, financials, and communication logs.",
       "completed": false,
-      "categoryName": "Urgent To-Do"
+      "categoryName": "Urgent To-Do",
+      "tags": []
     },
     {
       "id": "2b1d6de6-cd36-44a1-b7b5-2a0b71d223e2",
@@ -231,7 +233,8 @@
       "dueDate": "2021-06-22",
       "description": "Arrange a follow-up consultation to review recent lab results and update the treatment plan.",
       "completed": false,
-      "categoryName": "Personal Errands"
+      "categoryName": "Personal Errands",
+      "tags": []
     },
     {
       "id": "63e74b84-1e7d-46b6-9782-7e7f03b324e0",
@@ -239,7 +242,8 @@
       "dueDate": "2021-06-03",
       "description": "Follow up with Mr. Caleb to confirm the date and time for the scheduled video conference regarding project updates.",
       "completed": true,
-      "categoryName": "Urgent To-Do"
+      "categoryName": "Urgent To-Do",
+      "tags": []
     },
     {
       "id": "d89f93a1-b3e1-49d7-9ce3-bd013c15954a",
@@ -247,7 +251,8 @@
       "dueDate": "2021-06-02",
       "description": "Prepare and assign three practice exercises for Client A based on their last session's progress.",
       "completed": true,
-      "categoryName": "Personal Errands"
+      "categoryName": "Personal Errands",
+      "tags": []
     },
     {
       "id": "af15fd3b-91df-4056-bd3f-d679f9edbb54",
@@ -255,7 +260,8 @@
       "dueDate": "2021-06-13",
       "description": "Collect prescribed medication from the pharmacy and ensure all refills are included.",
       "completed": false,
-      "categoryName": "Personal Errands"
+      "categoryName": "Personal Errands",
+      "tags": []
     },
     {
       "id": "2b1ea1b5-74e0-4ae6-aabe-21e09c4f83ef",
@@ -263,7 +269,8 @@
       "dueDate": "2021-06-10",
       "description": "Complete the required compliance documentation and submit it before end of business day.",
       "completed": false,
-      "categoryName": "Urgent To-Do"
+      "categoryName": "Urgent To-Do",
+      "tags": []
     },
     {
       "id": "3b15f0e4-2d85-4655-8410-23cc3c5dd91f",
@@ -271,7 +278,8 @@
       "dueDate": "2021-06-18",
       "description": "Contact the clinic to schedule a routine health check-up appointment for next week.",
       "completed": false,
-      "categoryName": "Personal Errands"
+      "categoryName": "Personal Errands",
+      "tags": []
     }
   ]
 }

@@ -96,42 +96,6 @@
           "senderName": "Obaidullah Amarkhil",
           "message": "I’ve uploaded the scanned green card and the draft. Please check if everything’s okay.",
           "date": "2021-06-09T19:45:00"
-        },
-        {
-          "id": "6bd39451-782c-4280-86b2-192718848a37",
-          "date": "2025-06-10T11:05:48",
-          "isNew": false,
-          "isSelf": true,
-          "senderName": "You",
-          "message": "thanks",
-          "replyChatId": "22d716a1-19fa-4340-99f2-805065f7e40b"
-        },
-        {
-          "id": "abe8e716-e094-4513-b3a4-c8b2120c56fe",
-          "date": "2025-06-10T11:08:06",
-          "isNew": false,
-          "isSelf": true,
-          "senderName": "You",
-          "message": "good to know!",
-          "replyChatId": "c2f601aa-7f7f-4a16-9a1d-893a00ee5ff9"
-        },
-        {
-          "id": "b899aec2-2172-4e8d-a2ce-0f55abe4daf5",
-          "date": "2025-06-10T11:08:54",
-          "isNew": false,
-          "isSelf": true,
-          "senderName": "You",
-          "message": "u well",
-          "replyChatId": "fdf85de7-05a0-4c13-94c9-5971f265f2c3"
-        },
-        {
-          "id": "ab8062b2-e969-435f-b447-cc333314a505",
-          "date": "2025-06-10T11:16:12",
-          "isNew": false,
-          "isSelf": true,
-          "senderName": "You",
-          "message": "okay noted",
-          "replyChatId": "c239e138-75e7-4020-9293-98d9e276364f"
         }
       ]
     },
@@ -246,12 +210,27 @@
   ],
   "tasks": [
     {
+      "id": "e4356c13-786e-4e5c-b7f4-9b51901c7b98",
+      "title": "Close off Case #012920- RODRIGUES, Amiguel",
+      "dueDate": "2021-06-12",
+      "description": "This case has been reviewed and marked for closure due to inactivity. All relevant documents have been archived.",
+      "completed": false,
+      "categoryName": "Urgent To-Do",
+      "tags": [
+        "Appointments",
+        "Offline Meeting",
+        "Virtual Meeting",
+        "Self Task"
+      ]
+    },
+    {
       "id": "ee5a0b76-045d-41b2-bcf3-eab23dc4812e",
       "title": "Set up documentation report for several Cases : Case 145443, Case 192829 and Case 182203",
       "dueDate": "2021-06-14",
       "description": "Compile a comprehensive report for the listed cases including summaries, financials, and communication logs.",
       "completed": false,
-      "categoryName": "Urgent To-Do"
+      "categoryName": "Urgent To-Do",
+      "tags": []
     },
     {
       "id": "2b1d6de6-cd36-44a1-b7b5-2a0b71d223e2",
@@ -259,7 +238,8 @@
       "dueDate": "2021-06-22",
       "description": "Arrange a follow-up consultation to review recent lab results and update the treatment plan.",
       "completed": false,
-      "categoryName": "Personal Errands"
+      "categoryName": "Personal Errands",
+      "tags": []
     },
     {
       "id": "63e74b84-1e7d-46b6-9782-7e7f03b324e0",
@@ -267,7 +247,8 @@
       "dueDate": "2021-06-03",
       "description": "Follow up with Mr. Caleb to confirm the date and time for the scheduled video conference regarding project updates.",
       "completed": true,
-      "categoryName": "Urgent To-Do"
+      "categoryName": "Urgent To-Do",
+      "tags": []
     },
     {
       "id": "d89f93a1-b3e1-49d7-9ce3-bd013c15954a",
@@ -275,7 +256,8 @@
       "dueDate": "2021-06-02",
       "description": "Prepare and assign three practice exercises for Client A based on their last session's progress.",
       "completed": true,
-      "categoryName": "Personal Errands"
+      "categoryName": "Personal Errands",
+      "tags": []
     },
     {
       "id": "af15fd3b-91df-4056-bd3f-d679f9edbb54",
@@ -283,7 +265,8 @@
       "dueDate": "2021-06-13",
       "description": "Collect prescribed medication from the pharmacy and ensure all refills are included.",
       "completed": false,
-      "categoryName": "Personal Errands"
+      "categoryName": "Personal Errands",
+      "tags": []
     },
     {
       "id": "2b1ea1b5-74e0-4ae6-aabe-21e09c4f83ef",
@@ -291,7 +274,8 @@
       "dueDate": "2021-06-10",
       "description": "Complete the required compliance documentation and submit it before end of business day.",
       "completed": false,
-      "categoryName": "Urgent To-Do"
+      "categoryName": "Urgent To-Do",
+      "tags": []
     },
     {
       "id": "3b15f0e4-2d85-4655-8410-23cc3c5dd91f",
@@ -299,15 +283,8 @@
       "dueDate": "2021-06-18",
       "description": "Contact the clinic to schedule a routine health check-up appointment for next week.",
       "completed": false,
-      "categoryName": "Personal Errands"
-    },
-    {
-      "id": "6a386d1d-c838-4a54-b949-1c02290dcd20",
       "categoryName": "Personal Errands",
-      "completed": false,
-      "description": "kjhkjhkl",
-      "dueDate": "2025-06-20",
-      "title": "halo bang"
+      "tags": []
     }
   ]
 }

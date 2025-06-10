@@ -35,6 +35,7 @@ export default {
     'bg-sticker-tea',
     'bg-sticker-lilac',
     'bg-sticker-lavender',
+    'bg-sticker-navy',
 
     'bg-fab-task',
     'bg-fab-inbox',
@@ -66,6 +67,7 @@ export default {
         'sticker-tea': 'var(--color-sticker-tea)',
         'sticker-lilac': 'var(--color-sticker-lilac)',
         'sticker-lavender': 'var(--color-sticker-lavender)',
+        'sticker-navy': 'var(--color-sticker-navy)',
 
         'fab-task': 'var(--color-fab-task)',
         'fab-inbox': 'var(--color-fab-inbox)',

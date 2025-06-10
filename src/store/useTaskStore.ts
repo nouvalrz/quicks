@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { Task } from "../types/types";
+import type { Task, TaskTag } from "../types/types";
 import { v4 as uuidv4 } from "uuid";
 
 type TaskStore = {
@@ -11,6 +11,7 @@ type TaskStore = {
   updateDueDate: (taskId: string, dueDate: string) => Promise<void>;
   submitTask: (task: Task) => Promise<void>;
   deleteTask: (taskId: string) => Promise<void>;
+  toggleTag: (taskId: string, newTag: TaskTag) => Promise<void>;
 };
 
 export const useTaskStore = create<TaskStore>((set, get) => {
@@ -38,6 +39,7 @@ export const useTaskStore = create<TaskStore>((set, get) => {
           },
           body: JSON.stringify(taskData),
         });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         set((state) => {
           return {
@@ -61,6 +63,7 @@ export const useTaskStore = create<TaskStore>((set, get) => {
             "Content-Type": "application/json",
           },
         });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         set({ tasks: [...oldTask] });
       }
@@ -86,6 +89,7 @@ export const useTaskStore = create<TaskStore>((set, get) => {
           },
           body: JSON.stringify({ description: description }),
         });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         set({ tasks: [...oldTask] });
       }
@@ -111,6 +115,7 @@ export const useTaskStore = create<TaskStore>((set, get) => {
           },
           body: JSON.stringify({ completed: completed }),
         });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         set({ tasks: [...oldTask] });
       }
@@ -137,6 +142,43 @@ export const useTaskStore = create<TaskStore>((set, get) => {
           },
           body: JSON.stringify({ dueDate: dueDate }),
         });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      } catch (error) {
+        set({ tasks: [...oldTask] });
+      }
+    },
+    toggleTag: async (taskId, newTag) => {
+      const oldTask = get().tasks;
+      set((state) => {
+        return {
+          tasks: state.tasks.map((task) => {
+            if (task.id === taskId) {
+              const hasSameTag = task.tags.some((tag) => tag === newTag);
+              const newTags = hasSameTag
+                ? task.tags.filter((tag) => tag !== newTag)
+                : [...task.tags, newTag];
+              return { ...task, tags: newTags };
+            }
+            return task;
+          }),
+        };
+      });
+
+      const oldTags = oldTask.find((task) => task.id === taskId)!.tags;
+      const hasSameTag = oldTags.some((tag) => tag === newTag);
+      const newTags = hasSameTag
+        ? oldTags.filter((tag) => tag !== newTag)
+        : [...oldTags, newTag];
+
+      try {
+        await fetch(`/api/tasks/${taskId}`, {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ tags: newTags }),
+        });
+        // eslint-disable-next-line @typescript-eslint/no-unused-vars
       } catch (error) {
         set({ tasks: [...oldTask] });
       }
