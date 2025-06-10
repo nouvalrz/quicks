@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { tags, type Task } from "../../types/types";
 import { formatDateOnlyWithSlash, formatDaysLeft } from "../../lib/formatDate";
 import {
